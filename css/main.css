@@ -1,0 +1,132 @@
+/* 
+font-family: Arial, Helvetica, Helvetica Neue, sans-serif;
+font-size: 1rem;
+(Legend: font-size: 2rem;)
+
+Colors:
+    #DDD
+    #F5F5F5
+    #6495ED
+*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, Helvetica Neue, sans-serif;
+    background-color: #ffffff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.container {
+    background-color: #F5F5F5;
+    padding: 2rem 1rem;
+    border-radius:0.2rem;
+    border: solid 2px #DDD;
+    max-width: 25rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  
+    justify-content: center;
+    margin: auto;
+
+}
+
+
+legend {
+    grid-template-areas: l;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 200;
+    border: solid 2px #DDD;
+    background-color: #ffffff;
+    padding: 1.5rem 1rem;
+    width:fit-content;
+    text-align: left;
+}
+
+
+
+label {
+    font-size: 16px;
+    font-weight: 100;
+}
+
+input, textarea {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    padding:0.5rem;
+    border: solid 2px #DDD;
+    border-radius: 0.2rem;
+    font-family: Arial, Helvetica, Helvetica Neue, sans-serif;
+    font-size: 1rem;
+}
+
+#button {
+    margin-top: 1rem;
+    padding:0.5rem;
+    background-color: #6495ED;
+    color: #ffffff;
+    border: none;
+    border-radius: 0.2rem;
+    box-shadow: unset black;
+    font-family: Arial, Helvetica, Helvetica Neue, sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+@media (min-width: 35rem) {
+    .container {
+        justify-content: center;
+        align-items: center;
+        display: grid;
+        grid-template-areas:
+            "l l" 
+            "n e"
+            "m m"
+            "b b";
+        justify-content: center;
+        width:100%;
+        margin: auto;
+    }
+
+    .form-name {
+        grid-area: n;
+        margin-right: 0.5rem; 
+    }
+    
+    .form-email {
+        grid-area: e;
+        margin-left: 0.5rem;
+    }
+    
+    .form-message {
+        grid-area: m;
+    }
+    
+    #button {
+        grid-area: b;
+        width:fit-content;
+        padding: 0.5rem 2rem;
+    }
+}
+    
+@media (min-width: 40rem) {
+        .container {
+            max-width: 50rem;  
+        }
+    
+        
+    }
+    
+
